@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ビル活 | テナワン株式会社 - 中小ビルの価値最大化</title>
-    <meta name="description" content="空室にお困りのビルオーナー様へ。テナワンの「ビル活」で築古ビルを再生し、満室経営へ導きます。">
+    <title>ビルカツ | テナワン株式会社 - 中小ビルの価値最大化</title>
+    <meta name="description" content="空室にお困りのビルオーナー様へ。テナワンの「ビルカツ」で築古ビルを再生し、満室経営へ導きます。">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -105,18 +105,18 @@
     <!-- Header -->
     <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 border-b border-gray-100">
         <div class="container mx-auto px-4 md:px-6 flex h-20 md:h-24 items-center justify-between">
-            <!-- Left Side: Logo - shrink-0を削除し、flex-shrinkを有効化。画像にmax-w-fullを追加 -->
-            <a href="#" class="flex items-center h-full py-3 mr-4 lg:mr-8 min-w-0">
+            <!-- Left Side: Logo -->
+            <a href="#" class="flex items-center h-full py-3 mr-6 lg:mr-10 min-w-0">
                 <img src="https://tenawan.jp/cms/wp-content/uploads/2025/11/image-5.png" alt="ビル活ロゴ" class="h-full w-auto max-w-full object-contain object-left">
             </a>
             
-            <!-- Right Side: Nav & Actions - shrink-0でサイズを維持 -->
+            <!-- Right Side: Nav & Actions -->
             <div class="hidden md:flex items-center justify-end shrink-0 gap-4 lg:gap-6 xl:gap-8">
                 
                 <!-- Desktop Nav -->
                 <nav class="flex items-center gap-4 lg:gap-6 text-xs lg:text-sm font-bold text-tenawan-sub3 whitespace-nowrap">
                     <a href="#about" class="hover:text-tenawan-main transition flex items-center gap-1">
-                        <i class="fa-solid fa-question-circle text-tenawan-sub1"></i> ビル活とは
+                        <i class="fa-solid fa-question-circle text-tenawan-sub1"></i> ビルカツとは
                     </a>
                     <a href="#mechanism" class="hover:text-tenawan-main transition flex items-center gap-1">
                         <i class="fa-solid fa-gears text-tenawan-sub1"></i> 仕組み
@@ -127,7 +127,7 @@
                 </nav>
 
                 <!-- Phone & Button Area -->
-                <div class="flex items-center gap-3 lg:gap-4 shrink-0">
+                <div class="flex items-center gap-3 lg:gap-4">
                     <div class="flex flex-col items-end">
                         <span class="text-[9px] lg:text-[10px] text-gray-500 leading-none mb-1">お電話でのご相談</span>
                         <a href="tel:03-6434-1386" class="text-base lg:text-xl font-black text-tenawan-main leading-none">03-6434-1386</a>
@@ -146,7 +146,7 @@
         
         <!-- Mobile Nav -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-6 py-4 shadow-lg absolute w-full z-40">
-            <a href="#about" class="block py-3 text-tenawan-sub3 border-b" onclick="toggleMenu()">ビル活とは</a>
+            <a href="#about" class="block py-3 text-tenawan-sub3 border-b" onclick="toggleMenu()">ビルカツとは</a>
             <a href="#mechanism" class="block py-3 text-tenawan-sub3 border-b" onclick="toggleMenu()">仕組み</a>
             <a href="#case" class="block py-3 text-tenawan-sub3 border-b" onclick="toggleMenu()">事例</a>
             <a href="https://tenawan.jp/contact-old/owner" class="block mt-4 bg-tenawan-main text-white text-center py-3 rounded-lg font-bold" onclick="toggleMenu()">お問い合わせ</a>
@@ -186,6 +186,9 @@
                 <div class="md:w-1/2 flex justify-center relative">
                     <!-- 背景の光 -->
                     <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-tenawan-sub1/20 rounded-full blur-3xl"></div>
+                    
+                    <!-- ここにあったサンタ画像を削除 -->
+
                     <!-- メインキャラクター（URLエンコード済み） -->
                     <img src="https://tenawan.jp/cms/wp-content/uploads/2025/11/fdbe2392562534390a299ebf2f1d113e.png" alt="ビルカツちゃん元気ポーズ" class="relative z-10 w-full max-w-md animate-float character-img transform scale-110">
                 </div>
@@ -194,7 +197,8 @@
     </section>
 
     <!-- Problems Section (Thinking Character) -->
-    <section class="pt-24 pb-12 bg-[#FEEACF] relative overflow-hidden" id="about">
+    <!-- pb-0 だと画像の下端や影が切れて「はみ出し」に見えるため、pb-8に戻して余裕を持たせます -->
+    <section class="pt-24 pb-8 bg-[#FEEACF] relative overflow-hidden" id="about">
         <div class="container mx-auto px-6 relative z-10">
             <div class="text-center mb-8">
                 <span class="text-tenawan-main font-bold tracking-widest text-sm">PROBLEMS</span>
@@ -204,9 +208,11 @@
                 <div class="w-20 h-1 bg-tenawan-sub1 mx-auto rounded-full"></div>
             </div>
 
-            <div class="flex justify-center items-end w-full">
-                <!-- ビルカツの悩み（URLエンコード済み） - 中央配置・最大幅900px・位置調整（translate削除、pb追加） -->
-                <img src="https://tenawan.jp/cms/wp-content/uploads/2025/11/a196daf1780415429320bc30c5b4508b.png" alt="ビルカツの悩み" class="w-full max-w-[900px] h-auto object-contain character-img">
+            <div class="flex justify-center items-end w-full relative">
+                <!-- サンタクロース画像を削除しました -->
+
+                <!-- ビルカツの悩み（URLエンコード済み） - 中央配置・最大幅900px -->
+                <img src="https://tenawan.jp/cms/wp-content/uploads/2025/11/a196daf1780415429320bc30c5b4508b.png" alt="ビルカツの悩み" class="w-full max-w-[900px] h-auto object-contain character-img relative z-0">
             </div>
         </div>
     </section>
@@ -218,24 +224,35 @@
         
         <div class="container mx-auto px-6 text-center relative z-10">
             <h2 class="text-2xl md:text-4xl font-black text-white mb-6">
-                その悩み、<span class="text-tenawan-sub1 inline-block transform -rotate-2 border-b-4 border-white pb-1">「ビル活」</span>にお任せください！
+                <!-- 傾き（-rotate-2）を削除し、ビル活→ビルカツに変更 -->
+                その悩み、<span class="text-tenawan-sub1 inline-block border-b-4 border-white pb-1">「ビルカツ」</span>にお任せください！
             </h2>
             <p class="text-white text-lg mb-8">
                 古いビルや空室を改修して、ビルを有効活用します。
             </p>
-            <div class="inline-block relative">
-                 <!-- 驚き/ひらめきキャラクター -->
-                <img src="https://tenawan.jp/cms/wp-content/uploads/2025/11/41210da5683b5154eb62083f69ff806d.png" alt="ひらめくビルカツちゃん" class="h-32 md:h-40 object-contain mx-auto bg-white rounded-full p-2 shadow-xl border-4 border-tenawan-sub1">
+            
+            <!-- items-center -> items-end に変更して下揃え -->
+            <div class="flex justify-center items-end gap-2 md:gap-6 relative">
+                 <!-- 1. サンタクロース (左): サイズ約60% -->
+                 <img src="https://tenawan.jp/cms/wp-content/uploads/2025/11/b093b5be314543c23aaf63c3098c4fa8.png" alt="サンタクロース" class="h-20 md:h-24 object-contain transform -rotate-12 animate-bounce-slow mb-2">
+                 
+                 <!-- 2. ビルカツちゃん (中央): メイン -->
+                <img src="https://tenawan.jp/cms/wp-content/uploads/2025/11/41210da5683b5154eb62083f69ff806d.png" alt="ひらめくビルカツちゃん" class="h-32 md:h-40 object-contain bg-white rounded-full p-2 shadow-xl border-4 border-tenawan-sub1 relative z-10">
+
+                 <!-- 3. トナカイ (右): 新規追加、サイズ約60% -->
+                 <img src="https://tenawan.jp/cms/wp-content/uploads/2025/11/558b3d5f85ba381f4e38e4ca2cec8bff.png" alt="トナカイ" class="h-20 md:h-24 object-contain transform rotate-12 animate-bounce-slow mb-2">
             </div>
         </div>
     </section>
 
     <!-- Mechanism Section -->
-    <section class="py-24 bg-[#F88325]" id="mechanism">
+    <!-- 上の余白を pt-8 に変更 (py-24から変更し、下はpb-24で維持) -->
+    <section class="pt-8 pb-24 bg-[#F88325]" id="mechanism">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
                 <span class="text-white/80 font-bold tracking-widest text-sm">MECHANISM</span>
-                <h2 class="text-3xl md:text-4xl font-black text-white mt-2 mb-4">ビル活の仕組み</h2>
+                <!-- ビル活 → ビルカツ に変更 -->
+                <h2 class="text-3xl md:text-4xl font-black text-white mt-2 mb-4">ビルカツの仕組み</h2>
                 <p class="text-white/90 text-sm">オーナー様のリスクを最小限に抑えるシステム</p>
             </div>
 
@@ -247,7 +264,8 @@
     </section>
 
     <!-- Case Studies Section -->
-    <section class="py-24 bg-[#FFEDBB] relative" id="case">
+    <!-- 下の余白を pb-24 から pb-8 に変更して短くしました -->
+    <section class="pt-8 pb-8 bg-[#FFEDBB] relative" id="case">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
                 <span class="text-tenawan-main font-bold tracking-widest text-sm">CASE STUDY</span>
@@ -263,7 +281,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="py-24 bg-tenawan-sub3 text-white relative overflow-hidden" id="contact">
+    <section class="pt-8 pb-24 bg-tenawan-sub3 text-white relative overflow-hidden" id="contact">
         <!-- クリスマス装飾 -->
         <i class="fa-solid fa-tree text-tenawan-main/20 text-9xl absolute -bottom-10 right-0"></i>
         <i class="fa-regular fa-snowflake text-white/10 text-6xl top-10 left-10 animate-spin-slow"></i>
@@ -272,6 +290,9 @@
             <!-- フォーム部分を削除し、マップと連絡先のみに再構築 -->
             <div class="max-w-5xl mx-auto bg-tenawan-main rounded-2xl shadow-2xl overflow-hidden relative border-4 border-tenawan-main">
                 
+                <!-- Character Background -->
+                 <img src="21af7b92f4444db9a76a8c7ad5d688aa.webp" class="absolute -bottom-10 -left-10 w-64 opacity-20 rotate-12 pointer-events-none z-0" alt="背景キャラ">
+
                 <!-- Google Map - 幅いっぱい -->
                 <div class="w-full h-80 md:h-96 relative z-10 bg-gray-200">
                     <iframe src="https://maps.google.com/maps?q=東京都港区西麻布2-13-12&output=embed&z=15" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -298,7 +319,7 @@
                     
                     <div class="mt-8 text-center border-t border-white/20 pt-6">
                         <p class="text-white/80 font-medium text-sm md:text-base">
-                            まずはお気軽にご相談ください。<br class="md:hidden">「ビル活」で、あなたのビルの可能性を広げましょう！
+                            まずはお気軽にご相談ください。<br class="md:hidden">「ビルカツ」で、あなたのビルの可能性を広げましょう！
                         </p>
                     </div>
                 </div>
